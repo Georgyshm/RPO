@@ -29,12 +29,13 @@ public class User {
     @Column(name = "password")
     public String password;
 
-    // Поле - электронная почта
+    @Transient
+    public String np;
     @Column(name = "email")
     public String email;
 
     // Поле - соль
-    @JsonIgnore
+
     @Column(name = "salt")
     public String salt;
 
